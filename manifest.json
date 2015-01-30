@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Sprintly Select all in Reports",
+  "description": "To select all records visible in the reports view",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "list_check-128.png",
+    "default_title": "Check All visible items in Sprintly Reports"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://sprint.ly/*"],
+      "js": ["jquery-2.1.1.min.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "permissions": [
+    "tabs", "http://sprint.ly/*"
+  ]
+}
